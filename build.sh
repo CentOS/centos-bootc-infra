@@ -19,4 +19,4 @@ pkginstall buildah
 pkginstall cargo openssl-devel
 
 # Build tools
-pkginstall selinux-policy-targeted osbuild crypto-policies-scripts sudo
+pkginstall git-core selinux-policy-targeted osbuild crypto-policies-scripts sudo
