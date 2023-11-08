@@ -1,3 +1,4 @@
+---
 name: publish-image
 
 on:
@@ -38,6 +39,6 @@ jobs:
           containerfiles: ./Containerfile
           archs: s390x, arm64, amd64, ppc64le
           context: .
-      
+
       - name: Push To quay.io
         run: buildah manifest push --all ${{ env.IMAGE }} docker://${{ env.IMAGE }}
