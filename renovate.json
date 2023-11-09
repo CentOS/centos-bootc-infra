@@ -7,7 +7,7 @@
     {
       "matchPackageNames": ["quay.io/centos/centos"],
       "schedule": ["at any time"],
-      "automerge" true
+      "automerge": true
     }
   ]
 }
