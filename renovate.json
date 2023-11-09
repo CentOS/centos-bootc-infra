@@ -2,5 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "local>CentOS/.github:renovate-config"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["quay.io/centos/centos"],
+      "schedule": ["at any time"],
+      "automerge" true
+    }
   ]
 }
