@@ -1,7 +1,11 @@
 ---
-name: publish-image
+name: Build and Push Image
 
 on:
+  pull_request:
+    branches:
+      - main
+
   push:
     branches:
       - main
@@ -27,6 +31,7 @@ jobs:
 
       - name: Login to quay.io
         run: buildah login --username ${{ secrets.QUAY_USER }} --password ${{ secrets.QUAY_PASSWORD }} quay.io
+        if: ${{ github.event_name == 'push' }}
 
       - name: Build
         uses: redhat-actions/buildah-build@b4dc19b4ba891854660ab1f88a097d45aa158f76 # v2.12
@@ -39,3 +44,4 @@ jobs:
 
       - name: Push To quay.io
         run: buildah manifest push --all ${{ env.IMAGE }} docker://${{ env.IMAGE }}
+        if: ${{ github.event_name == 'push' }}
