@@ -2,24 +2,21 @@
 name: publish-image
 
 on:
-
   push:
     branches:
-    - main
+      - main
 
   workflow_dispatch:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE: quay.io/centos-boot/builder
+  IMAGE: quay.io/centos-bootc/builder
 
 jobs:
-
   build-and-push-image:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Install qemu dependency
         run: |
           sudo apt-get update

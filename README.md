@@ -1,4 +1,4 @@
-# centos-boot-infra
+# centos-bootc-infra
 
 ## Badges
 
