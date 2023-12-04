@@ -5,9 +5,10 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": ["quay.io/centos/centos"],
-      "schedule": ["at any time"],
-      "automerge": true
+      "matchPackageNames": [
+        "quay.io/centos/centos"
+      ],
+      "pinDigests": false
     }
   ]
 }

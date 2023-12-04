@@ -1,5 +1,8 @@
 # centos-bootc-infra
 
+This project produces the quay.io/centos-bootc/developer container image. It is
+used for building the fedora-bootc and centos-bootc images.
+
 ## Badges
 
 | Badge                   | Description          | Service      |
