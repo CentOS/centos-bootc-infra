@@ -17,6 +17,6 @@ pkginstall rpm-ostree skopeo
 pkginstall buildah
 # And a rust toolchain
 pkginstall cargo openssl-devel
-
 # Build tools
-pkginstall git-core selinux-policy-targeted osbuild crypto-policies-scripts sudo
+pkginstall git-core selinux-policy-targeted osbuild crypto-policies-scripts \
+    sudo unzip
